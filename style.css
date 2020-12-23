@@ -5,9 +5,9 @@ body {
   font-family: arial, sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
 }
+
+/* Navbar */
 
 nav {
   display: flex;
@@ -35,8 +35,9 @@ nav {
   cursor: pointer;
 }
 
-.navbar > li:nth-child() {
-
+.navbar > li:nth-child(-n + 2):hover {
+  opacity: 85%;
+  text-decoration: underline;
 }
 
 .icon-apps > img {
@@ -53,4 +54,51 @@ nav {
 .icon-profile-picture > img {
   margin-top: 2px;
   border-radius: 50%;
+}
+
+/* Logo and searchbar */
+
+.google-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 101px;
+}
+
+.searchbar {
+  display: flex;
+  max-width: 584px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  height: 44px;
+  margin: 0 auto;
+  margin-top: 42px;
+}
+
+.searchbar-internal {
+  flex: 1;
+  display: flex;
+  padding: 5px 8px 0 16px;
+  padding-left: 14px;
+}
+
+.magnifier {
+  height: 15px;
+  width: 15px;
+  margin-top: 10px;
+  opacity: 40%;
+  padding-right: 13px;
+}
+
+input {
+  border: none;
+  flex: 0.95;
+  font: 16px arial,sans-serif;
+  color: rgba(0,0,0,.87);
+  outline: none;
+}
+
+@media screen and (max-width: 650px) {
+  .searchbar {
+    max-width: 85%;
+  }
 }
